@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "[URL]http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd[/URL]">
+<html xmlns="[URL]http://www.w3.org/1999/xhtml[/URL]">
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<title></title>
+<script type="text/javascript">
+var count = 0;
+function countClicks() {
+ count = count + 1;
+    document.getElementById("p2").innerHTML = count;
+}
+</script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m4 l4">
+                <p><a class="red-text" href="javascript:countClicks();"><i class="material-icons">favorite</i></a></p>
+            </div>
+            <div class="col s12 m4 l4" style="margin-left:-290px;">
+                <p id="p2">0</p>
+            </div>
+        </div>
+
+        
+    </div>
+
+
+
+
+</body>
+</html>

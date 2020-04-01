@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <section id="profile" class="section section-search  col s12  m4 offset-m8  light-blue lighten-2
+  white-text center scrollspy" style="height: 90px;">
+
+<div class="s12 m2 offset-m4" style="margin-left: -300px;"> 
+
+  <a href="#" data-target="nav-mobile" class="top-nav sidenav-trigger full hide-on-large-only  white-text">
+ 
+    <i class="material-icons">menu</i>
+<br>   
+
+  </a>
+  <img src="/images/icons/TEAMWORK.png" class="hide-on-large-only " style=" margin-left: 100px;"> 
+</div>
+
+
+</section>
+
+
+  <div class="container">
+  
+  </div>
+  <ul id="nav-mobile" class="sidenav sidenav-fixed" style="transform: translateX(-105%);" >
+    <li>
+      <div class="user-view" >
+  <div class="background" >
+          <img src="/images/icons/TEAMWORK.png" style="margin-top: 35px;">
+        </div>
+        <div> </div>
+        
+       <br>
+       <br>
+      <br>
+        
+      </div>
+    </li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li class="search">
+
+      <div class="search-wrapper">
+     
+        <input id="search" placeholder="Search"> 
+        <i class="material-icons">search</i>
+        <div class="search-results"></div>
+      </div>
+    </li>
+    
+   <div style="margin-top: 85px;">  
+    <li><a href="feeds"><i class="material-icons">flip_to_front</i>Home</a></li>
+    <li><a href="draft"> <i class="material-icons"> drafts</i>new stories </a></li>
+    
+    <li><a href="/"> <i class="material-icons">person_pin</i>logout</a></li>
+
+  </div>
+  </ul>
+
+  
+   
+
+  <div> <%articles.forEach((article)=>{%> </div>
+
+  <div class="container">
+    <div class="row">
+     <div class="col s12  grey lighten-4 m12  offset-l2 z-depth-1 card horizontal">
+        
+         <div class="">
+           
+           <div class="card-stacked">
+             <div class="card-content">
+               <div class="row" >
+                <div class="col s7 m6  l2 "  style="margin-top: 40px;"   >
+                 
+                  <a href="#user"><img class="circle " src="./images/icons/profile_logo_.jpg" style="width: 20%; height: 20%; margin-left: 80px; "></a> 
+                </div>
+                <div class="col  s4 offset-s2 m6 l6 ">
+                <div style=" margin-top: 40px; ">
+               
+                    <p  ><%=article.username%></p>
+                    <p  ><%=article.job_role%></p>
+                    <p ><%=article.created_on%></p>
+                  </div>
+                </div>
+               </div>
+            
+               
+              
+                
+                
+ 
+                
+                 <h4 style="margin-top: 90px;"><%=article.article_title%><h4>   
+                  
+                  <p style="font-size: 20px;"><%= article.article%></p>  
+               
+               
+             </div>
+             
+                  
+
+             <div class="container" >
+              <div class="row">
+                <div class="col s12 m4  offset-m2 offset-l2 ">
+                   <a href="/flag" class="  waves-effect waves-light " ><i style="margin-left: 10px;"
+                        class="material-icons green-text">flag</i></a>  
+                        <a  href="/like" class=" waves-effect waves-light"> <i style="margin-left: 40px;"
+                          class="material-icons red-text">favorite</i> </a>
+                          
+                          <a href="/comment" class=" waves-effect waves-light "> <i style="margin-left: 60px;"
+                            class="material-icons blue-text">comment</i>
+                          
+                        </a>
+                </div>
+              
+                
+              
+              </div>
+             </div>
+           </div>
+         </div>
+       </div>
+   
+    </div>
+</div>
+
+
+<%   });
+%>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems);
+    });
+  </script>
+</body>
+
+</html>

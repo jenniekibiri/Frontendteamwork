@@ -106,3 +106,21 @@
   border-radius: 10px !important;
 }
 
+li.search{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 160px;
+  margin-top: 10px;
+  padding: 1px 0 0 0;
+  z-index: 2;
+}
+li.search .search-wrapper i.material-icons {
+  position: absolute;
+  top: 21px;
+  right: 10px;
+  cursor: pointer;
+}
+ul.sidenav.sidenav-fixed li {
+  line-height: 44px;
+}

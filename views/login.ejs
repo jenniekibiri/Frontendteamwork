@@ -24,20 +24,21 @@
 						<h3 class="header-title">LOGIN</h3>
 						<form class="login-form" action="login" method="POST">
 							<div class="form-group">
-								<input type="text" class="form-control" name="username" placeholder="Email or UserName">
+								<input type="text" class="form-control"  autocomplete="username" name="username" id="username"  placeholder=" username">
 							</div>
 							<div class="form-group">
 								<input type="Password" name="password" class="form-control" placeholder="Password">
 								<a href="#!" class="forgot-password">Forgot Password?</a>
+
 							</div>
 							<div class="form-group">
 								
-								<button type="submit" class="btn btn-primary btn-block white-text" >LOGIN</button>
+								<input  type="submit" autocomplete="password" value="LOGIN" class="btn btn-primary btn-block white-text" >
 							</div>
 							<div class="form-group">
 		
 		
-								<div class="text-center">New Member? <a href="./signup.html">Sign up Now</a></div>
+								<div class="text-center">New Member? <a href="signup">Sign up Now</a></div>
 							</div>
 						</form>
 					</div>
@@ -82,5 +83,10 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script>
+const username = document.getElementById('username').value;
+console.log(username)
+
+	</script>
 </body>
 </html>

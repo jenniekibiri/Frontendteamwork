@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+ <!--Import Google Icon Font-->
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <!--Import materialize.css-->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+ <link rel="stylesheet" href="css/style.css">
+</head>
+<title>teamwork</title>
+
+<body>
+
+  
+
+  <form action="/articles"  method="POST" >
+
+    <div class="row "  >
+        <div class="col s12 m8 offset-m2 offset-l2 white-text">
+            <div class="card grey lighten-4 white-text">
+    
+              
+    
+                <div class="card-content  ">
+                    <div class="form-field">
+                        <label for="userid">userid</label>
+                        <input type="text"  name="userid" required>
+                    </div><br>
+                    <div class="form-field">
+                      <label for="title">Title</label>
+                      <input type="text"    name="title" required>
+                  </div><br>
+                  <div class="form-field">
+                    <label for="categories"> categories</label>
+                    <div class="input-field">
+                      <input type="text"   name="category" class="autocomplete" id="autocomplete-input"  
+                        placeholder="healthy living, manegerial skill, finances, Technology, science, work, politics,other
+                        ">
+                    </div>
+                </div><br>
+               
+
+                <div class="form-field">
+                  <label for="article"    >Article</label>
+               
+                  <textarea type="text"  name="article" required > </textarea>
+              </div><br>
+              <div class="form-field">
+                <button class="btn-large waves-effect waves-dark    pink darken-3" style="width:100%;" >Publish</button>
+            </div><br>
+        </div>
+
+
+
+                    
+    </div></div>
+    </div></div></form>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+ <script>
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems);
+  });
+
+  const ac = document.querySelector('.autocomplete');
+    M.Autocomplete.init(ac, {
+      data: {
+        'healthy living':'',
+        "manegerial skills": null,
+        "finances ": null,
+        "Technology": null,
+        "science": null,
+        "work": null,
+        "politics": null,
+        " other": null,
+      
+      }
+    });
+ </script>
+</body>
+</html>

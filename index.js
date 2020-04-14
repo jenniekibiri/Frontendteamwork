@@ -5,9 +5,10 @@ const path = require('path');
 const router = express.Router();
 const bodyparser = require('body-parser');
 const {Client} = require('pg');
-
-const connectionString = 'postgres://postgres:5463jeny@localhost:5432/teamwork';
+//const env = process.env.DATABASE_URL;
+const connectionString = 'postgres://postgres:5463@localhost:5432/teamwork';
 const client = new Client({
+
     connectionString: connectionString
 });
 client.connect();
